@@ -1,0 +1,115 @@
+<!doctype html><html><head> 
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> 
+  <script> 
+
+     //function that display value 
+   function dis(val) 
+   { 
+       document.getElementById("display").value+=val 
+   } 
+      
+
+     //function that evaluates the digit and return result 
+
+         function solve() 
+
+         { 
+             let x = document.getElementById("display").value 
+             let y = eval(x) 
+             document.getElementById("display").value = y 
+         } 
+         
+         //function that clear the display 
+
+         function clr() 
+         { 
+           document.getElementById("display").value = "" 
+         } 
+        
+        //function for backspace 
+        function backSpace(){
+           display.value = display.value.slice(0, - 1);
+         }
+         
+         function addToHistory(value) {
+    history += value;
+    document.getElementById('history').innerText = history;
+}
+      </script> 
+ <style type="text/css" id="dcoder_stylesheet">div{
+  border : 2px outset black;
+  height : 530px;
+  width : 450px;
+  margin : 25%;
+  padding : 20px;
+  text-align : center;
+  font-size : 30px;
+  color : white;
+  background-color : black;
+  box-shadow : 15px 25px 30px grey;
+ 
+}
+
+input{
+  height : 10%;
+  width : 84%;
+  background-color : silver;
+  color : black;
+  font-size : 35px;
+}
+
+button{
+ 
+  height : 50px;
+  width : 18.3%;
+  margin : 5px;
+  background-color: white;
+  border: none;
+  color: black;
+  padding: 10px 18px;
+  text-decoration: none;
+  text-align : center;
+  display: inline-block;
+  font-size: 32px;
+  font-style : bold;
+  box-shadow: 2px 2px 5px;
+}
+
+button:hover{
+  background-color : grey;
+}</style></head> 
+ <body> 
+  <div> 
+   <b>CALCULATOR</b> 
+   <hr> 
+   <input type="text" name="display" id="display" disabled> 
+   <br> 
+   <hr> 
+   <button onclick="dis('7')">7</button> 
+   <button onclick="dis('8')">8</button> 
+   <button onclick="dis('9')">9</button> 
+   <button onclick="dis('+')">+</button> 
+   <br> 
+   <button onclick="dis('4')">4</button> 
+   <button onclick="dis('5')">5</button> 
+   <button onclick="dis('6')">6</button> 
+   <button onclick="dis('-')">-</button> 
+   <br> 
+   <button onclick="dis('1')">1</button> 
+   <button onclick="dis('2')">2</button> 
+   <button onclick="dis('3')">3</button> 
+   <button onclick="dis('*')">*</button> 
+   <br> 
+   <button onclick="dis('.')">.</button> 
+   <button onclick="dis('0')">0</button> 
+   <button onclick="dis('%')">%</button> 
+   <button onclick="dis('/')">/</button> 
+   <br> 
+   <button onclick="dis('(')">(</button> 
+   <button onclick="dis(')')">)</button> 
+   <button onclick="backSpace()" class="fas fa-backspace"></button> 
+   <button onclick="clr()">C</button> 
+   <button style="width: 84.5%; background-color: red; color:white; border :none;" onclick="solve('=')">=</button> 
+  </div> 
+ 
+</body></html>
